@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="./assets/scss/main.scss">
+</head>
+
+<body class="">
+    <main class="container-fluid h-100">
+        <div class="h-100 row">
+            <div class="col-lg-6 h-100">
+                <textarea name="markdown" id="markdown" class="form-control w-100 h-100"></textarea>
+            </div>
+            <div class="col-lg-6 h-100">
+                <label class="h-100" id="mark-out"></label>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./assets/ts/main.ts"></script>
+    <script src="./assets/ts/MyMarkupHandler.ts"></script>
+    <script>
+        new main();
+        main.TransformMarkup("markdown", "mark-out");
+    </script>
+</body>
+
+</html>
